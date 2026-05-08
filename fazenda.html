@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Fazenda - 3M Agropecuária</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .pagina-interna {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        
+        .info-section {
+            padding: 4rem 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .info-card {
+            background-color: var(--branco);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--sombra);
+            border-left: 4px solid var(--verde-principal);
+        }
+        
+        .info-card h3 {
+            color: var(--verde-escuro);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .info-card p {
+            color: var(--texto-medio);
+            line-height: 1.8;
+        }
+        
+        .info-card a {
+            color: var(--verde-principal);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .info-card a:hover {
+            color: var(--verde-escuro);
+            text-decoration: underline;
+        }
+        
+        .mapa-section {
+            padding: 4rem 0;
+            background-color: var(--cinza-claro);
+        }
+        
+        .mapa-container {
+            margin-top: 2rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--sombra);
+            height: 450px;
+            background-color: var(--cinza-medio);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--texto-medio);
+            font-style: italic;
+        }
+        
+        .atividades-section {
+            padding: 4rem 0;
+        }
+        
+        .atividades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .atividade-card {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--cinza-claro);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .atividade-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--sombra);
+        }
+        
+        .atividade-icone {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .atividade-card h3 {
+            color: var(--verde-escuro);
+            margin-bottom: 1rem;
+        }
+        
+        .atividade-card p {
+            color: var(--texto-medio);
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <!-- DESCOMENTE A LINHA ABAIXO E COMENTE A LINHA DE TEXTO PARA USAR LOGO COM IMAGEM -->
+                <!-- <img src="images/logo-fazenda.png" alt="Logo 3M Agropecuária" style="height: 50px; width: auto;"> -->
+                3M Agropecuária
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="fazenda.html" class="active">A Fazenda</a></li>
+                <li><a href="carreiras.html">Carreiras</a></li>
+                <li><a href="cadastro.html" class="btn-destaque">Trabalhe Conosco</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="pagina-interna">
+        
+        <!-- Seção de Contato -->
+        <section class="info-section">
+            <div class="container">
+                <h2 class="text-center">Sobre a 3M Agropecuária</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📍 Localização</h3>
+                        <p>
+                            <strong>Fazenda São Geraldo</strong><br>
+                            3M Agropecuária<br>
+                            Brasil 🇧🇷<br>
+                            <em>Sede principal das operações</em>
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>📞 Contato</h3>
+                        <p>
+                            <strong>Para mais informações:</strong><br>
+                            Disponível para visitas e consultorias<br>
+                            <strong>Horário:</strong> Segunda a Sexta, 8h às 17h<br>
+                            <em>Use o formulário de carreiras para contato</em>
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>🏢 Estrutura</h3>
+                        <p>
+                            <strong>Confinamento:</strong> 180 baias<br>
+                            <strong>Capacidade:</strong> 20.000 animais<br>
+                            <strong>Área Própria:</strong> 1.100 hectares<br>
+                            <strong>Área Arrendada:</strong> 7.800 hectares
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missão, Visão e Valores -->
+        <section class="mapa-section">
+            <div class="container">
+                <h2 class="text-center">Missão, Visão e Valores</h2>
+                <div class="info-grid" style="margin-top: 2rem;">
+                    <div class="info-card">
+                        <h3>🎯 Missão</h3>
+                        <p>
+                            Contribuir para uma agropecuária mais sustentável e eficiente, buscando difundir conhecimentos e tecnologias para ser referência no mercado.
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>👁️ Visão</h3>
+                        <p>
+                            Que a atividade agropecuária se apoie nos pilares <strong>econômico, social e ambiental</strong>, garantindo sustentabilidade em todas as operações.
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>💎 Valores</h3>
+                        <p>
+                            • Ética, justiça e respeito<br>
+                            • Responsabilidade social e ambiental<br>
+                            • Integração e espírito de equipe<br>
+                            • Aprimoramento contínuo
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atividades -->
+        <section class="atividades-section">
+            <div class="container">
+                <h2 class="text-center">Nossas Atividades</h2>
+                <div class="atividades-grid">
+                    <div class="atividade-card">
+                        <div class="atividade-icone">🐄</div>
+                        <h3>Confinamento de Bovinos</h3>
+                        <p>180 baias com capacidade estática para até 20.000 animais. Estrutura moderna focada em excelência operacional e bem-estar animal.</p>
+                    </div>
+                    
+                    <div class="atividade-card">
+                        <div class="atividade-icone">🌾</div>
+                        <h3>Operações Agrícolas</h3>
+                        <p>Operações agrícolas iniciadas em 2020 em 7.800 hectares de áreas arrendadas. Cultivos estratégicos para suporte das operações.</p>
+                    </div>
+                    
+                    <div class="atividade-card">
+                        <div class="atividade-icone">📈</div>
+                        <h3>Crescimento Contínuo</h3>
+                        <p>De 4 baias em 2014 para 180 baias atualmente. Trajetória de expansão estratégica e inovação constante no setor.</p>
+                    </div>
+                    
+                    <div class="atividade-card">
+                        <div class="atividade-icone">🌍</div>
+                        <h3>Sustentabilidade</h3>
+                        <p>Compromisso com responsabilidade social e ambiental. Pilares econômico, social e ambiental integrados em todas as operações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <div class="container">
+                <h2>Quer Conhecer Nossa Estrutura?</h2>
+                <p>Estamos abertos a parcerias, visitas e oportunidades de carreira</p>
+                <a href="cadastro.html" class="btn-primary">Cadastrar Currículo</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>3M Agropecuária</h4>
+                    <p>60+ anos de tradição, inovação e sustentabilidade no agronegócio brasileiro. Fazenda São Geraldo.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="fazenda.html">A Fazenda</a></li>
+                        <li><a href="carreiras.html">Carreiras</a></li>
+                        <li><a href="cadastro.html">Cadastrar Currículo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Estrutura</h4>
+                    <p>📍 Fazenda São Geraldo</p>
+                    <p>🐄 180 baias de confinamento</p>
+                    <p>🌾 8.900 hectares em operação</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 3M Agropecuária - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

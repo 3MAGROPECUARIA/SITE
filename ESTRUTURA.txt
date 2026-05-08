@@ -1,0 +1,155 @@
+<!-- Documento de Referência Rápida - Estrutura de Pastas e Imagens -->
+
+# 📁 ESTRUTURA DO PROJETO COM IMAGENS
+
+```
+site-fazenda/
+│
+├── 📄 index.html                    ← Página Inicial
+├── 📄 fazenda.html                  ← A Fazenda (Contatos)
+├── 📄 carreiras.html                ← Vagas
+├── 📄 cadastro.html                 ← Formulário
+├── 📄 README.md                     ← Guia de publicação
+├── 📄 COMO-ADICIONAR-IMAGENS.md     ← LEIA ESTE! (Super importante)
+├── 📄 GUIA-IMAGENS.html             ← Guia visual (abrir no navegador)
+│
+├── 📁 css/
+│   └── 📄 style.css                 ← Estilos (cores, layouts)
+│
+├── 📁 js/
+│   └── 📄 script.js                 ← Interatividade (menu mobile, etc)
+│
+└── 📁 images/                       ← PASTA PARA SUAS FOTOS
+    ├── 📸 logo-fazenda.png          (Sua logo - 200x200px)
+    ├── 📸 banner-hero.jpg           (Foto grande - 1920x1080px)
+    ├── 📸 foto-gado.jpg             (Foto do rebanho - 600x400px)
+    ├── 📸 foto-equipe.jpg           (Foto da equipe - 600x400px)
+    └── 📸 foto-instalacoes.jpg      (Foto das estruturas - 600x400px)
+```
+
+---
+
+# 🎯 O QUE FAZER AGORA?
+
+## PASSO 1: Ler os Guias
+1. Abra o arquivo **`COMO-ADICIONAR-IMAGENS.md`** (texto super claro)
+2. Ou abra **`GUIA-IMAGENS.html`** no navegador (visual bonito)
+
+## PASSO 2: Preparar Fotos
+1. Tire fotos da fazenda com seu smartphone
+2. Redimensione usando: https://www.iloveimg.com/pt/redimensionar-imagem
+3. Nomeie corretamente:
+   - `logo-fazenda.png`
+   - `banner-hero.jpg`
+   - `foto-gado.jpg`
+   - `foto-equipe.jpg`
+
+## PASSO 3: Subir Fotos no GitHub
+1. Faça login em GitHub
+2. Entre no seu repositório `site-fazenda`
+3. Clique em pasta `images`
+4. Clique em "Add file" → "Upload files"
+5. Arraste suas fotos
+6. Clique em "Commit changes"
+
+## PASSO 4: Editar Arquivos HTML
+1. No GitHub, abra `index.html`
+2. Clique no lápis (Edit)
+3. Procure por `<div class="logo">3M Agropecuária</div>`
+4. Substitua por:
+```html
+<div class="logo">
+    <img src="images/logo-fazenda.png" alt="Logo 3M Agropecuária" style="height: 50px; width: auto;">
+</div>
+```
+5. Clique "Commit changes"
+
+---
+
+# 📸 ONDE CADA IMAGEM APARECE
+
+## Logo (5 locais)
+- Menu de todas as 4 páginas (index, fazenda, carreiras, cadastro)
+- **Tamanho:** 50px de altura
+- **Arquivo:** `logo-fazenda.png`
+
+## Banner Hero (Página Inicial - grande!)
+- Fundo da seção inicial com o texto "Tradição e Excelência"
+- **Tamanho:** Cobre a tela toda (1920x1080 ou maior)
+- **Arquivo:** `banner-hero.jpg`
+- **Editar em:** `css/style.css` (procure por `.hero`)
+
+## Foto Quem Somos
+- Lado direito da seção "Quem Somos" na página inicial
+- **Tamanho:** 600x400px
+- **Arquivo:** `foto-gado.jpg` (ou outra que preferir)
+- **Editar em:** `index.html` (procure por `placeholder-img`)
+
+---
+
+# 🔍 DÚVIDAS ANTES DE COMEÇAR?
+
+**P: Tenho que usar essas imagens específicas?**
+R: NÃO! Use AS SUAS próprias fotos. Os nomes que sugeri são só exemplos.
+
+**P: Posso adicionar mais fotos além dessas?**
+R: SIM! Você pode adicionar quantas quiser. O site fica melhor com mais fotos!
+
+**P: A pasta images já existe?**
+R: SIM! Está vazia. É só você fazer upload das fotos.
+
+**P: E se eu não tiver logo?**
+R: Sem problema! Deixe só o texto "3M Agropecuária" no menu (já está configurado assim).
+
+**P: Qual o tamanho máximo de arquivo?**
+R: GitHub aceita até 25 MB por arquivo. Mas recomendo redimensionar para não ficar pesado.
+
+---
+
+# ✅ CHECKLIST ANTES DE PUBLICAR
+
+- [ ] Li o arquivo `COMO-ADICIONAR-IMAGENS.md`
+- [ ] Tirei fotos da fazenda
+- [ ] Redimensionei as fotos
+- [ ] Nomeei corretamente (com hífen, sem espaço)
+- [ ] Fiz upload na pasta `images/` do GitHub
+- [ ] Editei `index.html` para adicionar logo
+- [ ] Editei `fazenda.html` para adicionar logo
+- [ ] Editei `carreiras.html` para adicionar logo
+- [ ] Editei `cadastro.html` para adicionar logo
+- [ ] Editei `css/style.css` para adicionar banner hero (opcional mas recomendado)
+- [ ] Testei o site acessando o link do GitHub Pages
+- [ ] As imagens aparecem corretamente no desktop
+- [ ] As imagens aparecem corretamente no celular
+
+---
+
+# 🚀 ARQUIVOS IMPORTANTES
+
+| Arquivo | O que é | Deve editar? |
+|---------|---------|-------------|
+| `COMO-ADICIONAR-IMAGENS.md` | **Guia super simples** ← COMECE AQUI! | NÃO - só ler |
+| `GUIA-IMAGENS.html` | Versão visual do guia | NÃO - só ler no navegador |
+| `index.html` | Página inicial | **SIM** - adicionar logo |
+| `fazenda.html` | Informações | **SIM** - adicionar logo |
+| `carreiras.html` | Vagas | **SIM** - adicionar logo |
+| `cadastro.html` | Formulário | **SIM** - adicionar logo |
+| `css/style.css` | Estilos/cores | **SIM** (opcional) - adicionar banner |
+| `README.md` | Como publicar no GitHub | NÃO - só ler |
+
+---
+
+# 💡 RESUMO RÁPIDO
+
+1. **Prepare:** Tire fotos + redimensione + nomeie
+2. **Suba:** GitHub → images/ → upload files
+3. **Edite:** Abra arquivos .html no GitHub → clique lápis → copie/cole código
+4. **Teste:** Acesse seu site e veja funcionando
+
+**Tempo total: ~1 hora** (incluindo tirar fotos)
+
+---
+
+**Qualquer dúvida, me pergunta! 🌾🐄📸**
+
+Próxima pergunta: Quer que eu te ajude a editar os arquivos agora ou prefere tentar sozinha?

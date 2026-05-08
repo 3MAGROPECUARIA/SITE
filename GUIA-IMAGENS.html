@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📸 Guia - Como Adicionar Imagens</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { 
+            color: #2D5016; 
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        .intro {
+            background-color: #E8F5E9;
+            border-left: 4px solid #4A7C2C;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .intro p {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        .secao {
+            background-color: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .secao h2 {
+            color: #4A7C2C;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #7CB342;
+            padding-bottom: 0.5rem;
+        }
+        .secao h3 {
+            color: #2D5016;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .passo {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid #7CB342;
+        }
+        .passo-numero {
+            display: inline-block;
+            background-color: #4A7C2C;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        .passo p {
+            margin-bottom: 0.8rem;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d32f2f;
+        }
+        .code-block {
+            background-color: #2D2D2D;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .code-block code {
+            background: none;
+            color: #f8f8f2;
+            padding: 0;
+        }
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .tabela th, .tabela td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .tabela th {
+            background-color: #4A7C2C;
+            color: white;
+            font-weight: bold;
+        }
+        .tabela tr:hover {
+            background-color: #f9f9f9;
+        }
+        .aviso {
+            background-color: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        .aviso strong {
+            color: #E65100;
+        }
+        .sucesso {
+            background-color: #E8F5E9;
+            border-left: 4px solid #4CAF50;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        .imagem-exemplo {
+            border: 2px dashed #4A7C2C;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            margin: 1rem 0;
+            color: #999;
+        }
+        .checklist {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        .checklist li {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 1rem;
+            font-size: 1.2rem;
+            color: #4A7C2C;
+        }
+        .tabela-imagens {
+            font-size: 0.95rem;
+        }
+        .tabela-imagens td:first-child {
+            font-weight: 600;
+            color: #2D5016;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #4A7C2C;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        .btn-download:hover {
+            background-color: #2D5016;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 124, 44, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Guia Prático: Adicionar Imagens ao Site</h1>
+
+        <div class="intro">
+            <p>🎯 <strong>Objetivo:</strong> Mostrar exatamente onde colocar suas fotos e logo na fazenda</p>
+            <p>⏱️ <strong>Tempo estimado:</strong> 10-15 minutos</p>
+            <p>📱 <strong>Dificuldade:</strong> Muito fácil - não precisa programar nada!</p>
+        </div>
+
+        <!-- SEÇÃO 1: ESTRUTURA DE PASTAS -->
+        <div class="secao">
+            <h2>1️⃣ Entender a Estrutura de Pastas</h2>
+            
+            <p>Seu site tem esta estrutura:</p>
+
+            <div class="code-block">
+site-fazenda/
+├── index.html              (Página inicial)
+├── fazenda.html            (A Fazenda)
+├── carreiras.html          (Carreiras)
+├── cadastro.html           (Cadastro)
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── images/                 ← PASTA PARA AS FOTOS (vazia por enquanto)
+            </div>
+
+            <p style="margin-top: 1rem;">A pasta <code>images/</code> é onde você vai colocar todas as suas fotos e logo. É como um "guarda-roupa" do site.</p>
+        </div>
+
+        <!-- SEÇÃO 2: QUAIS IMAGENS VOCÊ PRECISA? -->
+        <div class="secao">
+            <h2>2️⃣ Quais Imagens Adicionar?</h2>
+
+            <p>Aqui está um resumo de <strong>onde cada imagem vai aparecer</strong>:</p>
+
+            <table class="tabela tabela-imagens">
+                <thead>
+                    <tr>
+                        <th>📍 Página</th>
+                        <th>🖼️ Imagem</th>
+                        <th>📐 Tamanho Recomendado</th>
+                        <th>💾 Formato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Todas as páginas</td>
+                        <td>Logo da fazenda</td>
+                        <td>200x200 px</td>
+                        <td>PNG ou JPG</td>
+                    </tr>
+                    <tr>
+                        <td>Página Inicial</td>
+                        <td>Banner hero (grande)</td>
+                        <td>1920x1080 px</td>
+                        <td>JPG</td>
+                    </tr>
+                    <tr>
+                        <td>Página Inicial</td>
+                        <td>Foto sobre a fazenda</td>
+                        <td>600x400 px</td>
+                        <td>JPG</td>
+                    </tr>
+                    <tr>
+                        <td>Página A Fazenda</td>
+                        <td>Fotos das atividades</td>
+                        <td>400x300 px</td>
+                        <td>JPG</td>
+                    </tr>
+                    <tr>
+                        <td>Página Carreiras</td>
+                        <td>Fotos da equipe/instalações</td>
+                        <td>400x300 px</td>
+                        <td>JPG</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="aviso">
+                <strong>⚠️ Importante:</strong> As dimensões acima são ideais. Mas a coisa mais importante é usar <strong>fotos REAIS da sua fazenda</strong>, não imagens genéricas de internet. Fotos autênticas vão muito mais profissionalismo!
+            </div>
+        </div>
+
+        <!-- SEÇÃO 3: PASSO A PASSO -->
+        <div class="secao">
+            <h2>3️⃣ Passo a Passo: Como Adicionar Imagens</h2>
+
+            <h3>🎬 PARTE A: Preparar as Imagens</h3>
+
+            <div class="passo">
+                <span class="passo-numero">1</span>
+                <p><strong>Tire fotos da sua fazenda</strong></p>
+                <p>Com seu smartphone está ótimo! Tire:</p>
+                <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                    <li>Foto aérea ou panorâmica da fazenda (banner)</li>
+                    <li>Foto do gado/pasto</li>
+                    <li>Foto da equipe</li>
+                    <li>Foto das instalações</li>
+                    <li>Logo da fazenda (se tiver)</li>
+                </ul>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">2</span>
+                <p><strong>Redimensionar as imagens</strong></p>
+                <p>Use um site GRATUITO para reduzir o tamanho:</p>
+                <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                    <li><strong>iLoveImg.com</strong> (mais fácil) → "Redimensionar" → arraste a foto → escolha tamanho</li>
+                    <li><strong>Canva.com</strong> → "Redimensionar imagem" → escolha tamanho</li>
+                    <li><strong>Photopea.com</strong> (Photoshop online grátis)</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Por que redimensionar?</strong> Fotos muito grandes deixam o site lento. Reduzir para 800x600 px é ideal.</p>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">3</span>
+                <p><strong>Salvar as imagens com nomes claros</strong></p>
+                <p>Nomes recomendados (sem espaços, com hífen):</p>
+                <div class="code-block">
+logo-fazenda.png
+banner-hero.jpg
+foto-gado.jpg
+foto-equipe.jpg
+foto-instalacoes.jpg
+foto-pasto.jpg
+                </div>
+                <p style="margin-top: 1rem;"><strong>⚠️ Evite:</strong> "Foto 1.jpg", "IMG_2024.jpg", "sem nome.png" → nomes confusos!</p>
+            </div>
+
+            <h3 style="margin-top: 2rem;">🚀 PARTE B: Subir as Imagens no GitHub</h3>
+
+            <div class="passo">
+                <span class="passo-numero">4</span>
+                <p><strong>Faça login no GitHub</strong></p>
+                <p>Acesse: <code>github.com</code> e faça login</p>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">5</span>
+                <p><strong>Entre no seu repositório</strong></p>
+                <p>Clique em seu repositório "site-fazenda"</p>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">6</span>
+                <p><strong>Navegue até a pasta <code>images</code></strong></p>
+                <p>Clique em <code>images/</code> (você verá a pasta vazia)</p>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">7</span>
+                <p><strong>Clique em "Add file" → "Upload files"</strong></p>
+                <p>Arraste suas fotos para a área indicada</p>
+                <p style="margin-top: 1rem;">Ou clique em "choose your files" e selecione as imagens</p>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">8</span>
+                <p><strong>Clique em "Commit changes"</strong></p>
+                <p>Coloque uma mensagem: "Upload de imagens da fazenda"</p>
+                <p style="margin-top: 1rem;">Aguarde 1-2 minutos. As imagens estarão disponíveis!</p>
+            </div>
+        </div>
+
+        <!-- SEÇÃO 4: EDITAR OS ARQUIVOS HTML -->
+        <div class="secao">
+            <h2>4️⃣ Editar o HTML para Usar as Imagens</h2>
+
+            <p>Agora você precisa <strong>avisar ao site onde estão as imagens</strong>. Vou mostrar onde editar cada arquivo:</p>
+
+            <h3>📄 A) Página Inicial (index.html)</h3>
+
+            <div class="passo">
+                <p><strong>Para adicionar Logo no Menu:</strong></p>
+                <p>Encontre esta linha:</p>
+                <div class="code-block">
+&lt;div class="logo"&gt;3M Agropecuária&lt;/div&gt;
+                </div>
+                <p style="margin-top: 1rem;">Substitua por:</p>
+                <div class="code-block">
+&lt;div class="logo"&gt;
+  &lt;img src="images/logo-fazenda.png" alt="Logo 3M" style="height: 50px;"&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <div class="passo">
+                <p><strong>Para adicionar Banner Hero (foto grande):</strong></p>
+                <p>Encontre esta linha (procure por "hero"):</p>
+                <div class="code-block">
+&lt;section class="hero"&gt;
+                </div>
+                <p style="margin-top: 1rem;">Edite a seção <code>.hero</code> no arquivo <code>css/style.css</code>:</p>
+                <p>Encontre:</p>
+                <div class="code-block">
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-principal) 100%);
+                </div>
+                <p style="margin-top: 1rem;">Substitua por:</p>
+                <div class="code-block">
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.6) 0%, rgba(45, 80, 22, 0.6) 100%), 
+                url('images/banner-hero.jpg') center/cover no-repeat;
+                </div>
+                <p style="margin-top: 1rem;"><strong>O que faz:</strong> A imagem fica de fundo, com uma camada semi-escura por cima para o texto ficar legível.</p>
+            </div>
+
+            <div class="passo">
+                <p><strong>Para adicionar Foto na Seção "Quem Somos":</strong></p>
+                <p>Encontre esta linha (procure por "placeholder-img"):</p>
+                <div class="code-block">
+&lt;div class="placeholder-img"&gt;
+    &lt;p&gt;📷 Insira aqui uma foto da fazenda&lt;/p&gt;
+&lt;/div&gt;
+                </div>
+                <p style="margin-top: 1rem;">Substitua por:</p>
+                <div class="code-block">
+&lt;img src="images/foto-gado.jpg" alt="Rebanho da 3M Agropecuária" 
+     style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"&gt;
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">📄 B) Página A Fazenda (fazenda.html)</h3>
+
+            <div class="passo">
+                <p><strong>Para adicionar Mapa (vai ficar onde diz "Mapa"):</strong></p>
+                <p>Encontre:</p>
+                <div class="code-block">
+&lt;div class="mapa-container"&gt;
+    &lt;p&gt;🗺️ Insira aqui o código embed do Google Maps&lt;/p&gt;
+&lt;/div&gt;
+                </div>
+                <p style="margin-top: 1rem;">Substitua por um mapa real do Google Maps. <a href="https://youtu.be/h6s6yEM_yFA" target="_blank">Ver tutorial aqui</a></p>
+            </div>
+
+            <h3 style="margin-top: 2rem;">📄 C) Adicionar Logo em TODAS as Páginas</h3>
+
+            <p>Você precisa adicionar a logo em 4 arquivos:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem;">
+                <li><code>index.html</code></li>
+                <li><code>fazenda.html</code></li>
+                <li><code>carreiras.html</code></li>
+                <li><code>cadastro.html</code></li>
+            </ul>
+
+            <p style="margin-top: 1rem;">Em cada um, encontre e edite:</p>
+            <div class="code-block">
+&lt;div class="logo"&gt;3M Agropecuária&lt;/div&gt;
+            </div>
+
+            <p style="margin-top: 1rem;">Por:</p>
+            <div class="code-block">
+&lt;div class="logo"&gt;
+  &lt;img src="images/logo-fazenda.png" alt="Logo 3M Agropecuária" style="height: 50px;"&gt;
+&lt;/div&gt;
+            </div>
+        </div>
+
+        <!-- SEÇÃO 5: MÉTODO SUPER FÁCIL -->
+        <div class="secao">
+            <h2>5️⃣ Método SUPER Fácil (Sem Editar Código)</h2>
+
+            <div class="sucesso">
+                <strong>💡 Se você não quer editar HTML:</strong> Use a plataforma Netlify!
+            </div>
+
+            <p>Em vez de GitHub Pages, use <strong>Netlify.com</strong> (também 100% grátis):</p>
+
+            <div class="passo">
+                <span class="passo-numero">1</span>
+                <p>Acesse: <code>netlify.com</code></p>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">2</span>
+                <p>Clique em "Sign up" e faça login com GitHub</p>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">3</span>
+                <p>Arraste a pasta <code>site-fazenda</code> inteira na tela do Netlify</p>
+            </div>
+
+            <div class="passo">
+                <span class="passo-numero">4</span>
+                <p>Netlify faz o upload automático E você consegue editar os arquivos direto lá (visual)</p>
+            </div>
+
+            <p style="margin-top: 1rem;"><strong>Vantagem:</strong> Você edita o HTML visualmente, sem mexer em código!</p>
+        </div>
+
+        <!-- SEÇÃO 6: CHECKLIST FINAL -->
+        <div class="secao">
+            <h2>✅ Checklist - Antes de Publicar</h2>
+
+            <ul class="checklist">
+                <li>Tirei fotos reais da fazenda (não imagens genéricas)</li>
+                <li>Redimensionei as fotos para ~800x600 px</li>
+                <li>Nomeei os arquivos corretamente (sem espaços)</li>
+                <li>Fiz upload das imagens na pasta <code>images/</code> do GitHub</li>
+                <li>Editei o <code>index.html</code> com a logo e foto</li>
+                <li>Editei os outros <code>.html</code> com a logo</li>
+                <li>Testei o site em <code>meu-usuario.github.io/site-fazenda</code></li>
+                <li>As fotos aparecem corretamente no desktop</li>
+                <li>As fotos aparecem corretamente no celular</li>
+            </ul>
+        </div>
+
+        <!-- SEÇÃO 7: EXEMPLO VISUAL -->
+        <div class="secao">
+            <h2>📸 Exemplo Visual - Onde as Imagens Vão</h2>
+
+            <p style="text-align: center; margin: 2rem 0; font-size: 1.2rem; color: #666;">
+                <strong>Página Inicial (index.html):</strong>
+            </p>
+
+            <div style="border: 2px solid #7CB342; border-radius: 10px; overflow: hidden; margin-bottom: 2rem;">
+                <div style="background-color: #4A7C2C; padding: 1rem; color: white; display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 50px; height: 50px; background-color: white; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                        🌾
+                    </div>
+                    <div><strong>Logo aqui</strong></div>
+                </div>
+                <div style="background: linear-gradient(135deg, #2D5016 0%, #4A7C2C 100%); padding: 3rem; text-align: center; color: white;">
+                    <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">🖼️ BANNER HERO (foto grande)</p>
+                    <p style="opacity: 0.9;">Foto panorâmica da fazenda aqui</p>
+                </div>
+                <div style="padding: 2rem;">
+                    <h3 style="color: #2D5016; margin-bottom: 1rem;">Quem Somos</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div>
+                            <p>Texto sobre a fazenda...</p>
+                        </div>
+                        <div style="background-color: #f0f0f0; padding: 2rem; border-radius: 10px; text-align: center;">
+                            🖼️ FOTO DO GADO/PASTO
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; color: #666;">
+                <p><strong>As imagens em branco</strong> são os placeholders que você vai substituir</p>
+            </div>
+        </div>
+
+        <!-- SEÇÃO 8: DÚVIDAS COMUNS -->
+        <div class="secao">
+            <h2>❓ Dúvidas Comuns</h2>
+
+            <div class="passo">
+                <p><strong>P: Qual é o melhor formato para fotos? JPG ou PNG?</strong></p>
+                <p><strong>R:</strong> 
+                    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                        <li><strong>JPG</strong> = Para fotos (menor tamanho, qualidade boa) ✅ RECOMENDADO</li>
+                        <li><strong>PNG</strong> = Para logo com fundo transparente (maior tamanho)</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="passo">
+                <p><strong>P: A foto não aparece no site. Por quê?</strong></p>
+                <p><strong>R:</strong> 
+                    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                        <li>Verifique o caminho: <code>images/nome-da-foto.jpg</code> (sem barra inicial /)</li>
+                        <li>Certifique-se que a imagem está mesmo na pasta <code>images/</code></li>
+                        <li>Aguarde 2-3 minutos após fazer upload no GitHub</li>
+                        <li>Limpe o cache do navegador: Ctrl+Shift+Delete</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="passo">
+                <p><strong>P: As fotos ficarão muito pesadas?</strong></p>
+                <p><strong>R:</strong> Não! Se você redimensionar para ~800x600 px e converter para JPG, cada foto fica ~50-200 KB. Totalmente normal.</p>
+            </div>
+
+            <div class="passo">
+                <p><strong>P: Posso usar fotos de sites tipo Shutterstock?</strong></p>
+                <p><strong>R:</strong> Melhor NÃO. Fotos genéricas parecem "fake". SUAS fotos reais são MUITO melhores para credibilidade!</p>
+            </div>
+
+            <div class="passo">
+                <p><strong>P: Quantas fotos devo adicionar?</strong></p>
+                <p><strong>R:</strong> O mínimo recomendado:
+                    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                        <li>1 logo</li>
+                        <li>1 banner grande (página inicial)</li>
+                        <li>3-4 fotos do dia a dia (gado, equipe, instalações)</li>
+                    </ul>
+                    Total: 5-6 imagens. Mais é melhor, mas não é obrigatório!
+                </p>
+            </div>
+        </div>
+
+        <!-- RODAPÉ -->
+        <div class="secao" style="background-color: #E8F5E9; text-align: center;">
+            <h2 style="border: none; color: #2D5016;">🎯 Resumo Rápido</h2>
+            <p style="font-size: 1.1rem; margin: 1rem 0;">
+                <strong>1.</strong> Tire fotos 📸 → 
+                <strong>2.</strong> Redimensione 📐 → 
+                <strong>3.</strong> Suba no GitHub 🚀 → 
+                <strong>4.</strong> Edite o HTML 💻 → 
+                <strong>5.</strong> Veja funcionando ✅
+            </p>
+            <p style="font-style: italic; color: #666;">Tudo super simples, sem necessidade de programação avançada!</p>
+        </div>
+    </div>
+</body>
+</html>
